@@ -13,9 +13,6 @@ public class ResponderServlet extends HttpServlet {
         final int statusCode = Integer.parseInt(req.getPathInfo().split("/")[1]);
         resp.setStatus(statusCode);
 
-        // when a content length header is present, camel does not try to read the request body twice
-//        resp.setHeader(Exchange.CONTENT_LENGTH, "0");
-
         PrintWriter out = resp.getWriter();
         out.println("<h1>All went well!</h1>");
     }

@@ -1,8 +1,8 @@
 Based on the camel-example-servlet-tomcat-no-spring example.
 
-This demonstrates an issue that occurs when proxying an endpoint that returns
-an HTTP status code 304 (or potentially any other code that implies an empty body), when no Content-Length header is present.
-
+This demonstrates an issue that occurs when proxying an http endpoint that returns
+a status code 304 (or potentially any other code listed in org.apache.http.protocol.HttpRequestExecutor#canResponseHaveBody) 
+using a servlet in Tomcat.
 
 We use the route definition
     
